@@ -1,1 +1,1 @@
-web: gunicorn codewithabhishek.wsgi
+web: gunicorn courses.wsgi
