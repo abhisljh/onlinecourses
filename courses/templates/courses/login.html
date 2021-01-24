@@ -1,0 +1,29 @@
+{% extends 'courses/base.html' %}
+{% load courses_custom_tags %}
+
+{% block title %}
+Login        
+{% endblock %}
+
+{% block content %}
+
+<div class="cotainer">
+    <h1 class="display-1">Login Page</h1>
+    <hr>
+    <div class="container">
+        <p>this is new login page</p>
+        <form action="" method="POST">
+            {% csrf_token %}
+                {{form.as_p}}
+    
+            <input type="submit" value="Login">
+           </form>
+    </div>
+   <div><a href="{% url 'signup' %}">Don't have an account?</a></div>
+   <div><a href="{% url 'reset_password' %}">Forgot Password</a></div>
+    
+</div>
+
+    
+{%endblock%}
+
