@@ -1,5 +1,4 @@
 {% extends 'courses/base.html' %}
-{% load crispy_forms_tags %}
 {% load courses_custom_tags %} 
 
 {% block title %}
@@ -15,7 +14,7 @@
    <div class="container">
        <form action="/signup" method="POST">
         {% csrf_token %}
-            {{form|crispy}}
+            {{form.as_ul}}
 
         <input type="submit" value="Register">
        </form>
